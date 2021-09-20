@@ -1,9 +1,16 @@
 package com.jshen9085.SP.model;
 
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import java.time.LocalDate;
 
 public class Student {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
     private String name;
     private LocalDate dob;
     private Integer age;
@@ -48,5 +55,5 @@ public class Student {
     public void setEmail(String email) {
         this.email = email;
     }
-    
+
 }
